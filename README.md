@@ -9,3 +9,7 @@ random functions that I think will be useful for me.
 ### Dependencies:
 
 R
+
+###TO DO
+
+[] Figure out an algorithm to get ideal distributions. Found nothing so far on the Internetz
