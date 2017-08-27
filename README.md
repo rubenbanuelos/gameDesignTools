@@ -9,7 +9,12 @@ random functions that I think will be useful for me.
 ### Dependencies:
 
 R
+  gtools
 
-###TO DO
+### TO DO
 
-[] Figure out an algorithm to get ideal distributions. Found nothing so far on the Internetz
+- [ ] Put this in a package
+- [X] Figure out an algorithm to get ideal distributions. Found no elegant approach so far on the Internetz
+- [ ] Write function to determine odds of rolling a score lower than X given YdZ
+- [ ] Write function to determine odds of rolling a score higher than X given YdZ
+- [ ] Write card drawing function
