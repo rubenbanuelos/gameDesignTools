@@ -10,6 +10,8 @@ random functions that I think will be useful for me.
 
 R
   gtools
+  devtools
+  roxygen
 
 ### TO DO
 
@@ -17,4 +19,6 @@ R
 - [X] Figure out an algorithm to get ideal distributions. Found no elegant approach so far on the Internetz
 - [X] Write function to determine odds of rolling a score lower than X given YdZ
 - [X] Write function to determine odds of rolling a score higher than X given YdZ
+- [ ] Add some documentation
+- [ ] Figure out how to install dependencies along with package
 - [ ] Write card drawing function

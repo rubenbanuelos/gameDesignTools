@@ -1,3 +1,5 @@
+#TODO(documentation): Document using Roxygen
+
 GetEmpyrical <- function(X, Y, Z){
 		rolls <- 0
 
