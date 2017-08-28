@@ -1,14 +1,14 @@
 #TODO(documentation): Document using Roxygen
 
-OddsXdYHigherThan <- function(X, odds, Y = 10, theoretical = FALSE, Z = 10000){
+OddsXdYHigherThan <- function(X, score.odds, Y = 10, theoretical = FALSE, dice.rolls = 10000){
 
   if (theoretical){
-    rolls <- GetTheoretical(X, Y)  # Theoretical approach
+    total.score <- GetTheoretical(X, Y)  # Theoretical approach
   } else {
-    rolls <- GetEmpyrical(X, Y, Z)  # Empyrical approach
+    total.score <- GetEmpyrical(X, Y, dice.rolls)  # Empyrical approach
   }
 
-  total.odds <- length(which(rolls > odds))/length(rolls)
+  total.odds <- length(which(total.score > score.odds))/length(total.score)
 
   return(total.odds * 100)
 }
