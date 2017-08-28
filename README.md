@@ -24,3 +24,4 @@ R
 - [ ] Write card drawing function
 - [ ] Write function to determine success based  dice roll distributions given XdY and a difficulty Z.
 - [ ] Write function to determine odds of getting a specific amount of successes given XdY and a difficulty Z.
+- [ ] Write unit tests.
