@@ -5,7 +5,7 @@ OddsXdYHigherThan <- function(X, score.odds, Y = 10, theoretical = FALSE, dice.r
 
   if (theoretical){
     total.score <- GetTheoretical(X, Y)  # Theoretical approach
-  } else {
+    } else {
     total.score <- GetEmpyrical(X, Y, dice.rolls)  # Empyrical approach
   }
 
@@ -25,11 +25,11 @@ GetScoreDistributionForXdY <- function(X, Y = 10, dice.rolls = 10000, plot.histo
 
   if (theoretical){
     total <- GetTheoretical(X, Y)
-  } else {
-    total <- GetEmpyrical(X, Y, dice.rolls)
-  }
+    } else {
+      total <- GetEmpyrical(X, Y, dice.rolls)
+    }
 
-  if (plot.histogram){
+    if (plot.histogram){
     total.bars <- X * (Y-1)  # Calculate number of bars based on dice rolled
 
     # Convert actual density to percentage values
@@ -55,12 +55,12 @@ GetTheoretical <- function(X, Y){
 }
 
 GetEmpyrical <- function(X, Y, dice.rolls){
-		total.score <- 0
+  total.score <- 0
 
-		for (i in 1:X){
+  for (i in 1:X){
      	total.score <- total.score + sample(1:Y , dice.rolls, replace = TRUE)  ##Roll Die
-    }
+     }
 
-    return(rolls)
-}
+     return(rolls)
+   }
 
