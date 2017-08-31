@@ -1,10 +1,22 @@
-GetSuccessesDistribution <- function (X, Y, Z, dice.rolls = 10000){
-	#TODO Theoretical
+GetSuccessesDistribution <- function (X, Y = 10, success, dice.rolls = 10000, theoretical = FALSE){
 	
+  if (theoretical){
+    
+    rolls <- GetDiceRollTheoreticalMatrix(X, Y)  # Gets a Dice Roll Ideal Matrix
+
+    return(rolls)
+
+  } else {
+
+    rolls <- GetDiceRollEmpyricalMatrix(X, Y, dice.rolls)  # Gets a Dice Roll Empyrical Matrix
+    
+    return(rolls)
+
+  }
 
 }
 
-GetDiceRollEmpyricalMatrix <- function (X, Y, Z, dice.rolls){
+GetDiceRollEmpyricalMatrix <- function (X, Y, dice.rolls){
 	roll.list <- list()
 
 	for (i in 1:X){
@@ -12,11 +24,11 @@ GetDiceRollEmpyricalMatrix <- function (X, Y, Z, dice.rolls){
 
   }
 
-  roll.matrix <- do.call(rbind, roll.matrix)
+  roll.matrix <- do.call(cbind, roll.list)
   return(roll.matrix)
 }
 
-GetDiceRollEmpyricalMatrix <- function (X, Y, Z){
+GetDiceRollTheoreticalMatrix <- function (X, Y){
 
 	library(gtools)
   roll.matrix <- permutations(n = Y, r = X, repeats.allowed = TRUE)
