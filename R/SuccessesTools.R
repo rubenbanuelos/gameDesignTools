@@ -1,6 +1,6 @@
 GetSuccessesDistribution <- function (X, Y, Z, dice.rolls = 10000){
 	#TODO Theoretical
-
+	
 
 }
 
@@ -13,7 +13,7 @@ GetDiceRollEmpyricalMatrix <- function (X, Y, Z, dice.rolls){
   }
 
   roll.matrix <- do.call(rbind, roll.matrix)
-  return roll.matrix
+  return(roll.matrix)
 }
 
 GetDiceRollEmpyricalMatrix <- function (X, Y, Z){
