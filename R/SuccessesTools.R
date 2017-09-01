@@ -1,18 +1,33 @@
-GetSuccessesDistribution <- function (X, Y = 10, success, dice.rolls = 10000, theoretical = FALSE){
+GetSuccessesDistribution <- function (X, Y = 10, success = 6 , fail = 1,
+                                      dice.rolls = 10000, theoretical = FALSE, 
+                                      plot.histogram = TRUE){
 	
   if (theoretical){
     
     rolls <- GetDiceRollTheoreticalMatrix(X, Y)  # Gets a Dice Roll Ideal Matrix
 
-    return(rolls)
-
   } else {
 
     rolls <- GetDiceRollEmpyricalMatrix(X, Y, dice.rolls)  # Gets a Dice Roll Empyrical Matrix
-    
-    return(rolls)
 
   }
+
+  total = integer(0)
+
+  for (i in 1:nrow(rolls)){
+    successes <- length(which(rolls[i,] >= success))
+    failures <- length(which(rolls[i,]<= fail))
+  
+    total <- c(total, successes - failures)
+  }
+
+  if (plot.histogram){
+    total.bars <- 2 * X  # Calculate number of bars based on dice rolled
+
+    DiceRollHistogram(total, total.bars)
+  }
+
+  return(total)
 
 }
 
