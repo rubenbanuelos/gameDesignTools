@@ -3,8 +3,7 @@ Small repo with random stuff useful to design board games
 
 ### Description
 
-So far I am writing most of this stuff in R because it is the fastest thing to get this stuff done, maybe I'll integrate all this in a package and maybe I'll even write a web app to use this stuff and host it in Heroku. But for now, these are some 
-random functions that I think will be useful for me.
+So far I am writing most of this stuff in R because it is the fastest thing to get this stuff done, maybe I'll integrate all this in a package and maybe I'll even write a web app to use this stuff and host it in Heroku. But for now, these are some random functions that I think will be useful for me.
 
 ### Dependencies:
 
@@ -16,8 +15,6 @@ R
 ### TO DO
 
 - [ ] Write function to determine odds of getting a specific amount of successes given XdY and a difficulty Z
-- [ ] Add some documentation
-- [ ] Figure out how to install dependencies along with package
 - [ ] Write unit tests
 - [ ] Put this in a package
 - [ ] Prettier Graphs
@@ -28,3 +25,5 @@ R
 - [X] Write function to determine odds of rolling a score lower than X given YdZ
 - [X] Write function to determine odds of rolling a score higher than X given YdZ
 - [X] Write function to determine success based  dice roll distributions given XdY and a difficulty Z
+- [X] Figure out how to install dependencies along with package
+- [X] Add some documentation

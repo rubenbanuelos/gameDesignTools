@@ -4,7 +4,11 @@ Title: A simple set of tools to help RPG and boardgame designers.
 Version: 0.1.0
 Author: Ruben Banuelos-Carrillo
 Maintainer: Ruben Banuelos-Carrillo  <krankes.hirn@gmail.com>
-Description: A simple package with some basic tools to simulate dice roll outcomes and odds.
+Description: A simple package with some basic tools to simulate dice roll
+    outcomes and odds.
 License: Do What the Fuck You Want Public License V2
 Encoding: UTF-8
 LazyData: true
+Imports:
+    gtools
+RoxygenNote: 5.0.1
