@@ -13,7 +13,7 @@ GetOddsXdYLowerThan(X, odds, Y = 10, theoretical = FALSE, Z = 10000)
 
 \item{theoretical}{Boolean, whether or not to use an ideal approach. Warning: An ideal approach can be very resource intensive for values of X and/or Y larger than 8. (Default: FALSE)}
 
-\item{score.odda}{An integer, the score not to beat.}
+\item{score.odds}{An integer, the score not to beat.}
 
 \item{dice.rolls}{An Integer, the amount of dice rolls to be simulated in case of running an empyrical simulation. (Default: 10000)}
 }

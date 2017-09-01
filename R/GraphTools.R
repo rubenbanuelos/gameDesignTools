@@ -5,7 +5,7 @@
 #' @return A histogram with percentage values.
 #' @examples
 #' DiceRollHistogram(dice.roll.vector, bars = length(dice.roll.vector))
-#' GetOddsXdYHigherThan(some.vector, bars = 5)
+#' DiceRollHistogram(some.vector, bars = 5)
 
 DiceRollHistogram <- function(data, bars){
   # Convert actual density to percentage values

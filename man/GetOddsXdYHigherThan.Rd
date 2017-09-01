@@ -10,13 +10,13 @@ GetOddsXdYHigherThan(X, score.odds, Y = 10, theoretical = FALSE,
 \arguments{
 \item{X}{An integer, the amount of dice to be rolled.}
 
+\item{score.odds}{An integer, the score to beat.}
+
 \item{Y}{An integer, the number of sides the die has. (Default: 10)}
 
 \item{theoretical}{Boolean, whether or not to use an ideal approach. Warning: An ideal approach can be very resource intensive for values of X and/or Y larger than 8. (Default: FALSE)}
 
 \item{dice.rolls}{An Integer, the amount of dice rolls to be simulated in case of running an empyrical simulation. (Default: 10000)}
-
-\item{score.odda}{An integer, the score to beat.}
 }
 \value{
 An integer with the probability of the score given being achieved or beaten expressed as a percentage.

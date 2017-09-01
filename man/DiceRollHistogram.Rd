@@ -19,6 +19,6 @@ A simple histogram function unsing percentage values.
 }
 \examples{
 DiceRollHistogram(dice.roll.vector, bars = length(dice.roll.vector))
-GetOddsXdYHigherThan(some.vector, bars = 5)
+DiceRollHistogram(some.vector, bars = 5)
 }
 
