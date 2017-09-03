@@ -62,7 +62,7 @@ GetDiceRollEmpyricalMatrix <- function (X, Y, dice.rolls){
   return(roll.matrix)
 }
 
-#' Get a M x N sized matrix (M = all possible combinatios of dice rolls and N = X) an exhaustive list of all possible combinations of dice rolls.
+#' Get a M x N sized matrix (M = all possible combinations of dice rolls and N = X) an exhaustive list of all possible combinations of dice rolls.
 #' 
 #' @param X An integer, the amount of dice to be rolled.
 #' @param Y An integer, the number of sides the die has. (Default: 10)
