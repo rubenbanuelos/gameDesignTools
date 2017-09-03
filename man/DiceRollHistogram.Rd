@@ -21,4 +21,3 @@ A simple histogram function unsing percentage values.
 DiceRollHistogram(dice.roll.vector, bars = length(dice.roll.vector))
 DiceRollHistogram(some.vector, bars = 5)
 }
-

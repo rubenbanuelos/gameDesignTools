@@ -27,4 +27,3 @@ Get the odds of rolling XdY dice and not beating a given score.
 GetOddsXdYLowerThan(5, score.odds = 7)
 GetOddsXdYLowerThan(X = 10, Y = 6, score.odds = 50)
 }
-

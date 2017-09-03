@@ -28,4 +28,3 @@ Get the odds of rolling XdY dice and beating a given score.
 GetOddsXdYHigherThan(5, score.odds = 7)
 GetOddsXdYHigherThan(X = 10, Y = 6, score.odds = 50)
 }
-

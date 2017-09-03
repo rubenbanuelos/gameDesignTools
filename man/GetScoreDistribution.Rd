@@ -28,4 +28,3 @@ Get the distribution for a total score after rolling XdY dice and summing the re
 GetScoreDistribution(5)
 GetScoreDistribution(X = 10, Y = 6, plot.histogram = FALSE)
 }
-

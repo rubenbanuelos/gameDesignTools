@@ -32,4 +32,3 @@ Get the distribution for a success/failure roll (White Wolf Style).
 GetSuccessesDistribution(5)
 GetSuccessesDistribution(X = 10, Y = 6, plot.histogram = FALSE)
 }
-
