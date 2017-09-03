@@ -79,3 +79,28 @@ GetDiceRollTheoreticalMatrix <- function (X, Y){
 
 }
 
+
+GenerateSuccessesVector <- function(X, Y, dice.rolls, success, fail, theoretical){
+
+	if (theoretical){
+    
+    rolls <- GetDiceRollTheoreticalMatrix(X, Y)  # Gets a Dice Roll Ideal Matrix
+
+  } else {
+
+    rolls <- GetDiceRollEmpyricalMatrix(X, Y, dice.rolls)  # Gets a Dice Roll Empyrical Matrix
+
+  }
+
+  total = integer(0)
+
+  for (i in 1:nrow(rolls)){
+    successes <- length(which(rolls[i,] >= success))
+    failures <- length(which(rolls[i,]<= fail))
+  
+    total <- c(total, successes - failures)
+  }
+
+  return(total)
+
+}

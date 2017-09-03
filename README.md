@@ -14,7 +14,6 @@ R
 
 ### TO DO
 
-- [ ] Write function to determine odds of getting a specific amount of successes given XdY and a difficulty Z
 - [ ] Write unit tests
 - [ ] Put this in a package
 - [ ] Prettier Graphs
@@ -27,3 +26,4 @@ R
 - [X] Write function to determine success based  dice roll distributions given XdY and a difficulty Z
 - [X] Figure out how to install dependencies along with package
 - [X] Add some documentation
+- [X] Write function to determine odds of getting a specific amount of successes given XdY and a difficulty Z

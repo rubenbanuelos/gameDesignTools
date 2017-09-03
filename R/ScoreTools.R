@@ -19,7 +19,7 @@ GetOddsXdYHigherThan <- function(X, score.odds, Y = 10, theoretical = FALSE, dic
     total.score <- GetEmpyricalScores(X, Y, dice.rolls)  # Empyrical approach
   }
 
-  total.odds <- length(which(total.score > score.odds))/length(total.score)
+  total.odds <- length(which(total.score >= score.odds))/length(total.score)
 
   return(total.odds * 100)
 }
@@ -36,9 +36,9 @@ GetOddsXdYHigherThan <- function(X, score.odds, Y = 10, theoretical = FALSE, dic
 #' GetOddsXdYLowerThan(5, score.odds = 7)
 #' GetOddsXdYLowerThan(X = 10, Y = 6, score.odds = 50)
 
-GetOddsXdYLowerThan <- function(X, odds, Y = 10, theoretical = FALSE, Z = 10000){
+GetOddsXdYLowerThan <- function(X, odds, Y = 10, theoretical = FALSE, dice.rolls = 10000){
 
-  return((100 - OddsXdYHigherThan(X, odds, Y, theoretical, Z)))
+  return((100 - OddsXdYHigherThan(X, odds, Y, theoretical, dice.rolls)))
 
 }
 
