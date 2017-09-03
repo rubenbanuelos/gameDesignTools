@@ -87,7 +87,7 @@ GetTheoreticalScores <- function(X, Y){
 
   library(gtools)
   total.score <- rowSums(permutations(n = Y, r = X, repeats.allowed = TRUE))
-  return(rolls)
+  return(total.score)
 
 }
 
