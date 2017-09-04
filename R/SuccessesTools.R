@@ -44,11 +44,10 @@ GetSuccessesDistribution <- function (X, Y = 10, success = 6 , fail = 1,
 #' GetSuccessesDistribution(X = 10, odds = 4 Y = 6, plot.histogram = FALSE)
 
 GetOddsSuccessesHigherThan <- function(X, odds, Y = 10, success = 6 , fail = 1,
-                                      dice.rolls = 10000, theoretical = FALSE, 
-                                      plot.histogram = TRUE){
+                                      dice.rolls = 10000, theoretical = FALSE){
 
   total <- GenerateSuccessesVector(X, Y, success, fail, dice.rolls, theoretical)
-  total.odds <- length(which(total.score >= score.odds))/length(total.score)
+  total.odds <- length(which(total >= odds))/length(total)
 
   return(total.odds * 100)
 
@@ -70,9 +69,8 @@ GetOddsSuccessesHigherThan <- function(X, odds, Y = 10, success = 6 , fail = 1,
 #' GetSuccessesDistribution(X = 10, odds = 4 Y = 6, plot.histogram = FALSE)
 
 GetOddsSuccessesLowerThan <- function(X, odds, Y = 10, success = 6 , fail = 1,
-                                      dice.rolls = 10000, theoretical = FALSE, 
-                                      plot.histogram = TRUE){
+                                      dice.rolls = 10000, theoretical = FALSE){
 
-  return(100 - GenerateSuccessesVector(X, Y, success, fail, dice.rolls, theoretical))
+  return(100 - GenerateSuccessesVector(X, odds, Y, success, fail, dice.rolls, theoretical))
   
 }

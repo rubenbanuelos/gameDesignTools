@@ -3,7 +3,7 @@ context("Test dice score functions")
 
 # Set test parameters
 upper.bound <- 10
-upper.bound.theoretical <- 8  #Troublesome if higher
+upper.bound.theoretical <- 8  # Troublesome if higher
 test.samples <- 5
 
 # Generate Random Inputs
