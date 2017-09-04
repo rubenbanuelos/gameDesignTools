@@ -33,7 +33,7 @@ test_that("Odds are correct", {
 
 		# Impossible odds
 		expect_equal(GetOddsSuccessesHigherThan(x.vector.theoretical[i], (x.vector.theoretical[i] + 1),
-																						y.vector.theoretical[i],	ceiling((y.vector.theoretical[i] / 2)), 
+																						y.vector.theoretical[i],	ceiling((y.vector.theoretical[i] / 2)),
 																						1, dice.rolls.vector[i], TRUE),
 								 0)
 
@@ -47,30 +47,30 @@ test_that("Odds are correct", {
 
 test_that("Distribution works", {
 
-	for (i in 1:test.samples){
+  for (i in 1:test.samples){
 
-		# Empyrical
+    # Empyrical
 
-		# Get an empyrical distribution
-		a <- GetSuccessesDistribution (x.vector[i], y.vector[i], ceiling((y.vector[i] / 2)), 1,
+    # Get an empyrical distribution
+    a <- GetSuccessesDistribution (x.vector[i], y.vector[i], ceiling((y.vector[i] / 2)), 1,
                                    dice.rolls.vector[i], FALSE, FALSE)
 
-		# Test values are within expected ranges
-		expect_equal(length(a), dice.rolls.vector[i])
-		expect_true(max(a) <= x.vector[i])
-		expect_true(min(a) >= -x.vector[i])  #These tests are more lax since they use empyrical
+    # Test values are within expected ranges
+    expect_equal(length(a), dice.rolls.vector[i])
+    expect_true(max(a) <= x.vector[i])
+    expect_true(min(a) >= -x.vector[i])  #These tests are more lax since they use empyrical
 
 
-		# Theoretical
+    # Theoretical
 
-		# Get an theoretical distribution
-		a <- GetSuccessesDistribution (x.vector.theoretical[i], y.vector.theoretical[i], 
-			ceiling((y.vector.theoretical[i] / 2)), 1, dice.rolls.vector[i], TRUE, FALSE)
+    # Get an theoretical distribution
+    a <- GetSuccessesDistribution (x.vector.theoretical[i], y.vector.theoretical[i],
+                                   ceiling((y.vector.theoretical[i] / 2)), 1, dice.rolls.vector[i], TRUE, FALSE)
 
-		# Test values are within expected ranges
-		expect_equal(max(a), x.vector.theoretical[i])
-		expect_equal(min(a), -x.vector.theoretical[i])
-	}
+    # Test values are within expected ranges
+    expect_equal(max(a), x.vector.theoretical[i])
+    expect_equal(min(a), -x.vector.theoretical[i])
+  }
 
 })
 

@@ -15,7 +15,7 @@ GetTheoreticalScores <- function(X, Y){
   # Warning: this function is very slow for high values for X and/or Y
 
   library(gtools)
-  total.score <- rowSums(permutations(n = Y, r = X, repeats.allowed = TRUE))
+  total.score <- rowSums(gtools::permutations(n = Y, r = X, repeats.allowed = TRUE))
   return(total.score)
 
 }
@@ -74,7 +74,7 @@ GetDiceRollEmpyricalMatrix <- function (X, Y, dice.rolls){
 GetDiceRollTheoreticalMatrix <- function (X, Y){
 
 	library(gtools)
-  roll.matrix <- permutations(n = Y, r = X, repeats.allowed = TRUE)
+  roll.matrix <- gtools::permutations(n = Y, r = X, repeats.allowed = TRUE)
   return(roll.matrix)
 
 }
