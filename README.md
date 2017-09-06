@@ -14,8 +14,6 @@ R
 
 ### TO DO
 
-- [ ] Write unit tests
-- [ ] Put this in a package
 - [ ] Prettier Graphs
 - [ ] Write card drawing function
 
@@ -27,3 +25,5 @@ R
 - [X] Figure out how to install dependencies along with package
 - [X] Add some documentation
 - [X] Write function to determine odds of getting a specific amount of successes given XdY and a difficulty Z
+- [X] Write unit tests
+- [X] Put this in a package

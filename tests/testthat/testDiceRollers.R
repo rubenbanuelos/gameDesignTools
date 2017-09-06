@@ -42,8 +42,8 @@ test_that("Theoretical score dice rolls make sense", {
   for (i in 1:test.samples){
 
     a <- GetTheoreticalScores(x.vector.theoretical[i], y.vector.theoretical[i])
-    
-    # Commence tests    
+
+    # Commence tests
 
     #Lower score should never be below amount of dice rolled
     expect_true(all(a >= x.vector.theoretical[i]))
@@ -58,7 +58,7 @@ test_that("Theoretical score dice rolls make sense", {
 test_that("Empyrical success dice rolls make sense", {
 
   for (i in 1:test.samples){
-    
+
     a <- GetDiceRollEmpyricalMatrix(x.vector[i], y.vector[i], dice.rolls.vector[i])
 
     # Commence tests
@@ -69,7 +69,7 @@ test_that("Empyrical success dice rolls make sense", {
 
     # Check that maximum value matches input
 
-    expect_identical(max(a), y.vector[i]) 
+    expect_identical(max(a), y.vector[i])
   }
 
 })
@@ -77,7 +77,7 @@ test_that("Empyrical success dice rolls make sense", {
 test_that("Theoretical success dice rolls make sense", {
 
   for (i in 1:test.samples){
-    
+
     a <- GetDiceRollTheoreticalMatrix(x.vector.theoretical[i], y.vector.theoretical[i])
 
     # Commence tests
@@ -98,10 +98,10 @@ test_that("Success vector generator works", {
     # Commence tests
 
     #Result should be zero successes
-    a <- GenerateSuccessesVector(x.vector[i], y.vector[i], dice.rolls.vector[i], (y.vector[i] + 1), 0, FALSE)
+    a <- GenerateSuccessesVector(x.vector[i], y.vector[i], (y.vector[i] + 1), 0, dice.rolls.vector[i], FALSE)
     expect_true(all(a == 0))
     #Result should be all fails
-    a <- GenerateSuccessesVector(x.vector[i], y.vector[i], dice.rolls.vector[i], (y.vector[i] + 1), y.vector[i], FALSE)
+    a <- GenerateSuccessesVector(x.vector[i], y.vector[i], (y.vector[i] + 1), y.vector[i], dice.rolls.vector[i], FALSE)
     expect_true(all(a == -x.vector[i]))
   }
 

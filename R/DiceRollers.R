@@ -41,7 +41,7 @@ GetEmpyricalScores <- function(X, Y, dice.rolls){
 }
 
 #' Get a M x N sized matrix (M = dice.rolls and N = X) with M simulations of dice rolls.
-#' 
+#'
 #' @param X An integer, the amount of dice to be rolled.
 #' @param Y An integer, the number of sides the die has. (Default: 10)
 #' @param dice.rolls An Integer, the amount of dice rolls to be simulated.
@@ -63,7 +63,7 @@ GetDiceRollEmpyricalMatrix <- function (X, Y, dice.rolls){
 }
 
 #' Get a M x N sized matrix (M = all possible combinations of dice rolls and N = X) an exhaustive list of all possible combinations of dice rolls.
-#' 
+#'
 #' @param X An integer, the amount of dice to be rolled.
 #' @param Y An integer, the number of sides the die has. (Default: 10)
 #' @return A Matrix with all possible dice rolls.
@@ -80,10 +80,10 @@ GetDiceRollTheoreticalMatrix <- function (X, Y){
 }
 
 
-GenerateSuccessesVector <- function(X, Y, dice.rolls, success, fail, theoretical){
+GenerateSuccessesVector <- function(X, Y, success, fail, dice.rolls, theoretical){
 
 	if (theoretical){
-    
+
     rolls <- GetDiceRollTheoreticalMatrix(X, Y)  # Gets a Dice Roll Ideal Matrix
 
   } else {
@@ -97,8 +97,10 @@ GenerateSuccessesVector <- function(X, Y, dice.rolls, success, fail, theoretical
   for (i in 1:nrow(rolls)){
     successes <- length(which(rolls[i,] >= success))
     failures <- length(which(rolls[i,]<= fail))
-  
-    total <- c(total, successes - failures)
+
+    count <- successes - failures
+
+    total <- c(total, count)
   }
 
   return(total)

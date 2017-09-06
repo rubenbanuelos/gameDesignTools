@@ -3,7 +3,7 @@ context("Test dice success functions")
 
 # Set test parameters
 upper.bound <- 10
-upper.bound.theoretical <- 7  # Troublesome if higher
+upper.bound.theoretical <- 6  # Troublesome if higher
 test.samples <- 5
 
 # Generate Random Inputs
@@ -26,7 +26,7 @@ test_that("Odds are correct", {
 
 		# Trivial odds
 		expect_equal(GetOddsSuccessesHigherThan(x.vector[i], 0, y.vector[i], ceiling((y.vector[i] / 2)),
-																						1, dice.rolls.vector[i], FALSE),
+																						0, dice.rolls.vector[i], FALSE),
 								 100)
 
 		# Theoretical
@@ -39,7 +39,7 @@ test_that("Odds are correct", {
 
 		# Trivial odds
 		expect_equal(GetOddsSuccessesHigherThan(x.vector.theoretical[i], 0, y.vector.theoretical[i],
-																						ceiling((y.vector.theoretical[i] / 2)), 1, dice.rolls.vector[i], TRUE),
+																						ceiling((y.vector.theoretical[i] / 2)), 0, dice.rolls.vector[i], TRUE),
 								 100)
 	}
 
@@ -52,7 +52,7 @@ test_that("Distribution works", {
     # Empyrical
 
     # Get an empyrical distribution
-    a <- GetSuccessesDistribution (x.vector[i], y.vector[i], ceiling((y.vector[i] / 2)), 1,
+    a <- GetSuccessesDistribution (x.vector[i], y.vector[i], ceiling(y.vector[i] / 2), 1,
                                    dice.rolls.vector[i], FALSE, FALSE)
 
     # Test values are within expected ranges
