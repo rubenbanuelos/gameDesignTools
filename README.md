@@ -14,8 +14,9 @@ R
 
 ### TO DO
 
-- [ ] Prettier Graphs
-- [ ] Write card drawing function
+- [ ] Write tests for graphs using fuzzy image comparisson.
+- [ ] Prettier Graphs.
+- [ ] Write card drawing function.
 
 
 - [X] Figure out an algorithm to get ideal distributions. Found no elegant approach so far on the Internetz
