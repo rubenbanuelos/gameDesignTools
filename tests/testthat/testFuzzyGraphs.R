@@ -25,11 +25,15 @@ test_that("Success distribution graphs looks OK",{
 
   skip_if_not(file.exists(reference.graph))  # Skip test if there's not a reference graph
 
-  graph.name <- tempfile(fileext = "png")
+  graph.name <- tempfile(fileext = ".png")
+
+  reference.fingerprint <- getFingerprint(reference.graph) # Get Fingerprint for reference
 
   png(filename =  graph.name)
-  # Graph code goes here
-  dev.off
+  GetSuccessesDistribution(5) #Graph sample
+  dev.off()
+
+  expect_true(isSimilar(graph.name, reference.fingerprint, threshold = 32))
 
 })
 
@@ -43,10 +47,14 @@ test_that("Score distribution graphs look OK", {
 
   skip_if_not(file.exists(reference.graph))  # Skip test if there's not a reference graph
 
-  graph.name <- tempfile(fileext = "png")
+  graph.name <- tempfile(fileext = ".png")
 
-  png(filename = reference.graph)
-  #Graph code goes here
-  dev.off
+  reference.fingerprint <- getFingerprint(reference.graph)
+
+  png(filename = graph.name)
+  GetScoreDistribution(5) # Graph Sample
+  dev.off()
+
+  expect_true(isSimilar(graph.name, reference.fingerprint, threshold = 32))
 
 })
