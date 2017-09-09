@@ -15,7 +15,6 @@ R
 
 ### TO DO
 
-- [ ] Write tests for graphs using fuzzy image comparisson.
 - [ ] Prettier Graphs.
 - [ ] Write card drawing function.
 
@@ -29,3 +28,4 @@ R
 - [X] Write function to determine odds of getting a specific amount of successes given XdY and a difficulty Z
 - [X] Write unit tests
 - [X] Put this in a package
+- [X] Write tests for graphs using fuzzy image comparisson.
