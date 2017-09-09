@@ -1,6 +1,3 @@
-
-
-
 #' Get a vector with all possible scores after rolling XdY.  Warning: An ideal approach can be very resource intensive for values of X and/or Y larger than 8.
 #'
 #' @param X An integer, the amount of dice to be rolled.

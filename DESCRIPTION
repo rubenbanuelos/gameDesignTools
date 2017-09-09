@@ -10,8 +10,10 @@ License: Do What the Fuck You Want Public License V2
 Encoding: UTF-8
 LazyData: true
 Imports:
-    gtools
+    gtools,
+    ggplot2,
+    png
 Suggests:
-	testthat,
+	  testthat,
     visualTest
 RoxygenNote: 6.0.1

@@ -9,6 +9,7 @@ So far I am writing most of this stuff in R because it is the fastest thing to g
 
 R
   gtools
+  ggplot2
   devtools
   roxygen
 
